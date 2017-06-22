@@ -9,8 +9,8 @@ class ResultsController < ApplicationController
     @colour = params[:colour]
     @random_noun = params[:noun]
     @result = Result.new(@colour,@random_noun,'URL')
-    @data = image_urls
     @@history.push(@result)
+    @data = image_urls
     @search_history = @@history.reverse
   end
 
