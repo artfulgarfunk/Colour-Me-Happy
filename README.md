@@ -34,7 +34,12 @@ happiness, pride, fear, religion, bird, book, phone, rice, snow, water
 - Required gems for ResClient - http-cookies, netrc, mime-types
 
 # Testing
-Run rspec to run the test suite
+Run `rspec` in your terminal in the project folder
+
+# How to Run
+- Clone this repo
+- Run `bundle install`
+- Run `bin/rails server` 
 
 # Demo
 [Heroku](https://stark-atoll-86537.herokuapp.com)
