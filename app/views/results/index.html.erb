@@ -1,34 +1,56 @@
-<h1> Colourful Results! </h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+      <h1> Colourful Results... </h1>
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <p class='intro'> Top 5 results for <u><b> <%= params[:noun] %></b></u> with a <u><b><%= params[:colour] %></b></u> filter </p>
+    </div>
 
-Showing top 5 results for <%= params[:noun] %> with a <%= params[:colour] %> filter
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-2">
+      <form action="/" id="home">
+          <input type="hidden" value="home" />
+      </form>
+      <button type="submit" class="btn <%= params[:colour] %>" form="home">  Search Again? </button>
+    </div>
+    <div class="col-sm-1">
+    </div>
+  </div>
+  </br>
+  <div class="row">
+    <div class="col-sm-8">
+          <a href="<%=@data[0]%>">
+              <%= image_tag("#{@data[0]}") %>
+          </a>
+          <%= image_tag("#{@data[1]}") %>
+          <%= image_tag("#{@data[2]}") %>
+          <%= image_tag("#{@data[3]}") %>
+          <%= image_tag("#{@data[4]}") %>
 
-<form action="/" id="home">
-    <input type="submit" value="Search Again!" />
-</form>
+    </div>
 
-<a href="<%=@data[0]%>">
-<%= image_tag("#{@data[0]}") %>
-</a>
+    <div class="col-sm-4">
+      <p class='previous'> Previous Searches </p>
+      <% @search_history.each do |s| %>
+      <form action="/results" method="get" id="research">
+        Colour: <%= s.colour %> <br />
+        Date: <%= s.date %> <br />
+        Time: <%= s.time %> <br />
+        Noun: <%= s.noun %> <br />
+        <input type="hidden" name="colour" value="<%=s.colour%>" />
+        <input type="hidden" name="noun" value="<%=s.noun%>" />
+        <input type="submit" value="Search Same Again" />
+      </form>
+      <% end %>
+    </div>
 
-<%= image_tag("#{@data[1]}") %>
-
-<%= image_tag("#{@data[2]}") %>
-
-<%= image_tag("#{@data[3]}") %>
-
-<%= image_tag("#{@data[4]}") %>
-
-<p> Previous Searches </p>
-<% @search_history.each do |s| %>
-  Colour: <%= s.colour %>
-  Date: <%= s.date %>
-  Time: <%= s.time %>
-  Randomly Chosen Noun: <%= s.noun %> <br />
-  Teh big url <%=s.url %> <br />
-  Re Search?? <br />
-  <form action="/results" method="get" id="research">
-    <input type="hidden" name="colour" value="<%=s.colour%>" />
-    <input type="hidden" name="noun" value="<%=s.noun%>" />
-    <input type="submit" value="Search Same Again" />
-  </form>
-  <% end %>
+  </div>
+</div>
