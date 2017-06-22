@@ -1,6 +1,10 @@
 <h1> Colourful Results! </h1>
 
-Showing top 5 results for <%= @random_noun %> with a <%= @colour %> filter
+Showing top 5 results for <%= params[:noun] %> with a <%= params[:colour] %> filter
+
+<form action="/" id="home">
+    <input type="submit" value="Search Again!" />
+</form>
 
 <a href="<%=@data[0]%>">
 <%= image_tag("#{@data[0]}") %>
@@ -13,3 +17,18 @@ Showing top 5 results for <%= @random_noun %> with a <%= @colour %> filter
 <%= image_tag("#{@data[3]}") %>
 
 <%= image_tag("#{@data[4]}") %>
+
+<p> Previous Searches </p>
+<% @search_history.each do |s| %>
+  Colour: <%= s.colour %>
+  Date: <%= s.date %>
+  Time: <%= s.time %>
+  Randomly Chosen Noun: <%= s.noun %> <br />
+  Teh big url <%=s.url %> <br />
+  Re Search?? <br />
+  <form action="/results" method="get" id="research">
+    <input type="hidden" name="colour" value="<%=s.colour%>" />
+    <input type="hidden" name="noun" value="<%=s.noun%>" />
+    <input type="submit" value="Search Same Again" />
+  </form>
+  <% end %>
