@@ -16,6 +16,11 @@
 @import "bootstrap";
 // @import "buttons";
 
+.img {
+  border: 5px solid black;
+  margin: 10px;
+  max-width: 400px;
+}
 .jumbotron{
   background-color: rgba(241, 242, 164, 0.71)
 }
@@ -26,6 +31,8 @@
 .rescon {
   background-color: rgba(255, 255, 255, 0)
 }
+
+
 
 .btn {
 	padding: 14px 24px;
@@ -93,10 +100,6 @@
 //   background-color: rgba(239, 241, 224, 0.71);
 // }
 //
-// .pic {
-//   padding: 10px 10px 10px 10px;
-//   border: 2px solid black;
-// }
 //
 h1 {
   font-family: 'Lucida Console', cursive;
