@@ -34,19 +34,13 @@
       <div class="col-md-3">
         <p class='previous'> Previous </br> Searches </p>
         <% @search_history.each do |s| %>
-        <div class='rescon'>
-          Date: <%= s.date %> <br />
-          Time: <%= s.time %> <br />
+          Searched at <%= s.time %> on <%= s.date %>
           <form action="/results" method="get" id="research">
-          <input type="hidden" name="colour" value="<%=s.colour%>" />
-          <input type="hidden" name="noun" value="<%=s.noun%>" />
-          <button type="submit" class="btn research <%= s.colour %>" form="research"/>
-          <%= s.colour.capitalize %>
-          <%= s.noun.capitalize %>
-          </button>
-        </form>
-      </div>
-    </br>
+            <input type="hidden" name="colour" value="<%=s.colour%>" />
+            <input type="hidden" name="noun" value="<%=s.noun%>" />
+            <button class="research btn <%= s.colour %>" type="submit" />  <%= s.colour %> <%= s.noun %> </button>
+          </form>
+        </br>
         <% end %>
       </div>
     </div>
