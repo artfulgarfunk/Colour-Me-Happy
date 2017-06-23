@@ -1,45 +1,103 @@
-<h1>Colour Me Happy</h1>
+<div class="container">
+  <h1>Colour Me Happy</h1>
 
-<p class='intro'> Click a colour to search... </p>
+  <p class='intro'> Click a colour to search... </p>
 
-<form action="/results" method="get" id="red">
-  <input type="hidden" name="colour" value="red" />
-  <input type="hidden" name="noun" value="<%=@noun%>" />
-</form>
-<button type="submit" class="btn red" id="red" form="red"> </button>
+  <div class="jumbotron home">
+    <div class="row">
+      <div class="col-md-2">
+        <form action="/results" method="get" id="red">
+          <input type="hidden" name="colour" value="red" />
+          <input type="hidden" name="noun" value="<%=@noun%>" />
+        </form>
+        <button type="submit" class="btn red" id="red" form="red"> </button>
+      </div>
+      <div class="col-md-10">
+      </div>
+    </div>
 
-<form action="/results" method="get" id="pink">
-  <input type="hidden" name="colour" value="pink" />
-  <input type="hidden" name="noun" value="<%=@noun%>" />
-</form>
-<button type="submit" class="btn pink" id="pink" form="pink"> </button>
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <form action="/results" method="get" id="pink">
+          <input type="hidden" name="colour" value="pink" />
+          <input type="hidden" name="noun" value="<%=@noun%>" />
+        </form>
+        <button type="submit" class="btn pink" id="pink" form="pink"> </button>
+      </div>
+      <div class="col-md-9">
+      </div>
+    </div>
 
-<form action="/results" method="get" id="orange">
-  <input type="hidden" name="colour" value="orange" />
-  <input type="hidden" name="noun" value="<%=@noun%>" />
-</form>
-<button type="submit" class="btn orange" id="orange" form="orange"> </button>
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-2">
+        <form action="/results" method="get" id="orange">
+          <input type="hidden" name="colour" value="orange" />
+          <input type="hidden" name="noun" value="<%=@noun%>" />
+        </form>
+        <button type="submit" class="btn orange" id="orange" form="orange"> </button>
+      </div>
+      <div class="col-md-8">
+      </div>
+    </div>
 
-<form action="/results" method="get" id="yellow">
-  <input type="hidden" name="colour" value="yellow" />
-  <input type="hidden" name="noun" value="<%=@noun%>" />
-</form>
-<button type="submit" class="btn yellow" id="yellow" form="yellow"> </button>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-2">
+        <form action="/results" method="get" id="yellow">
+          <input type="hidden" name="colour" value="yellow" />
+          <input type="hidden" name="noun" value="<%=@noun%>" />
+        </form>
+        <button type="submit" class="btn yellow" id="yellow" form="yellow"> </button>
+      </div>
+      <div class="col-md-7">
+      </div>
+    </div>
 
-<form action="/results" method="get" id="green">
-  <input type="hidden" name="colour" value="green" />
-  <input type="hidden" name="noun" value="<%=@noun%>" />
-</form>
-<button type="submit" class="btn green" id="green" form="green">  </button>
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-2">
+        <form action="/results" method="get" id="green">
+          <input type="hidden" name="colour" value="green" />
+          <input type="hidden" name="noun" value="<%=@noun%>" />
+        </form>
+        <button type="submit" class="btn green" id="green" form="green">  </button>
+      </div>
+      <div class="col-md-6">
+      </div>
+    </div>
 
-<form action="/results" method="get" id="blue">
-  <input type="hidden" name="colour" value="blue" />
-  <input type="hidden" name="noun" value="<%=@noun%>" />
-</form>
-<button type="submit" class="btn blue" id="blue" form="blue">  </button>
+    <div class="row">
+      <div class="col-md-5">
+      </div>
+      <div class="col-md-2">
+        <form action="/results" method="get" id="blue">
+          <input type="hidden" name="colour" value="blue" />
+          <input type="hidden" name="noun" value="<%=@noun%>" />
+        </form>
+        <button type="submit" class="btn blue" id="blue" form="blue">  </button>
+      </div>
+      <div class="col-md-5">
+      </div>
+    </div>
 
-<form action="/results" method="get" id="purple">
-  <input type="hidden" name="colour" value="purple" />
-  <input type="hidden" name="noun" value="<%=@noun%>" />
-</form>
-<button type="submit" class="btn purple" id="purple" form="purple">  </button>
+    <div class="row">
+      <div class="col-md-6">
+      </div>
+      <div class="col-md-2">
+        <form action="/results" method="get" id="purple">
+          <input type="hidden" name="colour" value="purple" />
+          <input type="hidden" name="noun" value="<%=@noun%>" />
+        </form>
+        <button type="submit" class="btn purple" id="purple" form="purple">  </button>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
+</div>

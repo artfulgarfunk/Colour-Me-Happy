@@ -1,56 +1,54 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-12">
+        <h1> Colourful Results... </h1>
+      </div>
     </div>
-    <div class="col-md-8">
-      <h1> Colourful Results... </h1>
-    </div>
-    <div class="col-md-2">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8">
-      <p class='intro'> Top 5 results for <u><b> <%= params[:noun] %></b></u> with a <u><b><%= params[:colour] %></b></u> filter </p>
-    </div>
+    <div class="row">
+      <div class="col-md-9">
+        <p class='intro'> Top results for <u><b> <%= params[:colour] %></b></u> and <u><b><%= params[:noun] %></b></u> </p>
+      </div>
 
-    <div class="col-md-1">
-    </div>
-    <div class="col-md-2">
-      <form action="/" id="home">
-          <input type="hidden" value="home" />
-      </form>
-      <button type="submit" class="btn <%= params[:colour] %>" form="home">  Search Again? </button>
-    </div>
-    <div class="col-md-1">
-    </div>
-  </div>
-  </br>
-  <div class="row">
-    <div class="col-md-8">
-          <a href="<%=@data[0]%>">
-              <%= image_tag("#{@data[0]}") %>
-          </a>
-          <%= image_tag("#{@data[1]}") %>
-          <%= image_tag("#{@data[2]}") %>
-          <%= image_tag("#{@data[3]}") %>
-          <%= image_tag("#{@data[4]}") %>
+      <div class="col-md-3">
+        <form action="/" id="home">
+            <input type="hidden" value="home" />
+        </form>
+        <button type="submit" class="btn <%= params[:colour] %>" form="home"> New Search </button>
+      </div>
 
     </div>
+    </br>
+    <div class="row">
+      <div class="col-md-9">
+            <a href="<%=@data[0]%>">
+                <%= image_tag("#{@data[0]}") %>
+            </a>
+            <%= image_tag("#{@data[1]}") %>
+            <%= image_tag("#{@data[2]}") %>
+            <%= image_tag("#{@data[3]}") %>
+            <%= image_tag("#{@data[4]}") %>
 
-    <div class="col-md-4">
-      <p class='previous'> Previous Searches </p>
-      <% @search_history.each do |s| %>
-      <form action="/results" method="get" id="research">
-        Colour: <%= s.colour %> <br />
-        Date: <%= s.date %> <br />
-        Time: <%= s.time %> <br />
-        Noun: <%= s.noun %> <br />
-        <input type="hidden" name="colour" value="<%=s.colour%>" />
-        <input type="hidden" name="noun" value="<%=s.noun%>" />
-        <input type="submit" value="Search Same Again" />
-      </form>
-      <% end %>
+      </div>
+
+      <div class="col-md-3">
+        <p class='previous'> Previous </br> Searches </p>
+        <% @search_history.each do |s| %>
+        <div class='rescon'>
+          Date: <%= s.date %> <br />
+          Time: <%= s.time %> <br />
+          <form action="/results" method="get" id="research">
+          <input type="hidden" name="colour" value="<%=s.colour%>" />
+          <input type="hidden" name="noun" value="<%=s.noun%>" />
+          <button type="submit" class="btn research <%= s.colour %>" form="research"/>
+          <%= s.colour.capitalize %>
+          <%= s.noun.capitalize %>
+          </button>
+        </form>
+      </div>
+    </br>
+        <% end %>
+      </div>
     </div>
-
   </div>
 </div>

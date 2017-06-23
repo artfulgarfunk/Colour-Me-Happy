@@ -336,73 +336,7 @@
 	RAISED BUTTONS
 ******************************************************/
 
-.btn-primary.raised {
-	box-shadow: 0 3px 0 0 #007299;
-}
-.red {
-	border: 1px outset red;
-	background-color: rgb(212, 20, 78);
-	height:200px;
-	width:200px;
-	cursor:pointer;
-}
-.red:hover {
-	background-color: rgba(212, 20, 78, 0.70);
-}
-.pink {
-	background-color: rgb(230, 69, 207);
-	height:200px;
-	width:200px;
-	cursor:pointer;
-}
-.pink:hover {
-	background-color: rgba(230, 69, 207, 0.70);
-}
-.orange {
-	background-color: rgb(227, 119, 58);
-	height:200px;
-	width:200px;
-	cursor:pointer;
-}
-.orange:hover {
-	background-color: rgba(227, 119, 58, 0.70);
-}
-.yellow {
-	background-color: rgb(226, 224, 30);
-	height:200px;
-	width:200px;
-	cursor:pointer;
-}
-.yellow:hover {
-	background-color: rgba(226, 224, 30, 0.70);
-}
-.green {
-	background-color: rgb(89, 185, 30);
-	height:200px;
-	width:200px;
-	cursor:pointer;
-}
-.green:hover {
-	background-color: rgba(89, 185, 30, 0.70);
-}
-.blue {
-	background-color: rgb(39, 101, 173);
-	height:200px;
-	width:200px;
-	cursor:pointer;
-}
-.blue:hover {
-	background-color: rgba(39, 101, 173, 0.70);
-}
-.purple {
-	background-color: rgb(74, 39, 173);
-	height:200px;
-	width:200px;
-	cursor:pointer;
-}
-.purple:hover {
-	background-color: rgba(74, 39, 173,0.70);
-}
+
 .btn-primary.raised:active, .btn-primary.raised.active {
 	background: #33a6cc;
 	box-shadow: none;
